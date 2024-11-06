@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ecbbec, #f1ebf1, #f0f8ff, #b6acdd);
+}
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite;
+}
+
+
+
+
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px); /* Adjust this value to control how far it moves */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-move {
+  animation: move 3s ease-in-out infinite; /* Adjust duration and easing as needed */
+}
+
+.group:hover image {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.group:hover .bg-blue-500 {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(4px); /* This will blur the background */
+}
+
+  .swing-effect {
+    transform-origin: top;
+    animation: swingIn 0.5s ease forwards;
+  }
+  @keyframes swingIn {
+    0% {
+      transform: perspective(1000px) rotateX(-90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: perspective(1000px) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+
+
+
