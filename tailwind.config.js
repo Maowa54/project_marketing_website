@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+
+     
+
       fontFamily: {
         airstrip: ['Airstrip Four', 'sans-serif'], // Fallback to sans-serif
       },
