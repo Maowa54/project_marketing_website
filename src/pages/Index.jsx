@@ -12,9 +12,9 @@ import {
 import Dropdown from "../component/Dropdown";
 import Accordion from "../component/Accordion";
 import ScrollToTopButton from "../component/ScrollToTopButton";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Index = () => {
-  
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleButton, setIsVisibleButton] = useState(false);
 
@@ -124,7 +124,7 @@ const Index = () => {
 
   return (
     <div>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <div className="hero-section">
         <div className="bouncing-ball overflow-hidden ">
           <img
@@ -134,7 +134,7 @@ const Index = () => {
           />
         </div>
 
-        <div className=" mt-12  mx-auto relative px-6 lg:px-10 max-w-screen-xl">
+        <div className="mt-2 md:mt-12  mx-auto relative px-6 lg:px-10 max-w-screen-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 ">
             {/* Text Section */}
             <div className="mt-5 lg:mt-0 lg:py-24 lg:pl-24 text-center  lg:text-left mb-8">
@@ -153,14 +153,14 @@ const Index = () => {
                 presence through expert SEO and digital marketing solutions.
               </p>
 
-              <div className="flex justify-center lg:justify-start mt-2 space-x-6">
-                <button className="bg-[#4E2FDA] relative overflow-hidden text-sm  mt-6 font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start mt-2 sm:space-x-4 md:space-x-6">
+                {/* Start Ranking Now Button */}
+                <button className="bg-[#4E2FDA] relative overflow-hidden text-xs md:text-sm mt-6 font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1  w-fit ">
                   <span className="relative z-20">Start Ranking Now</span>{" "}
-                  {/* Ensuring text is above the background */}
-                  <div className="ml-2 flex items-center justify-center w-8 h-8 bg-white rounded-full relative z-10">
+                  <div className="ml-2 flex items-center justify-center size-6 md:size-8 bg-white rounded-full relative z-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
+                      className="size-3 md:size-5 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -174,17 +174,18 @@ const Index = () => {
                     </svg>
                   </div>
                   <span
-                    className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150" // Adjust duration here if needed
+                    className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150"
                     style={{ transformOrigin: "center" }}
                   ></span>
-                </button>{" "}
-                <button className="bg-transparent border border-[#4E2FDA] relative overflow-hidden text-sm mt-6 font-medium text-[#4E2FDA] hover:text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
+                </button>
+
+                {/* Contact Now Button */}
+                <button className="bg-transparent border border-[#4E2FDA] relative overflow-hidden w-fit text-xs md:text-sm mt-4 md:mt-6 font-medium text-[#4E2FDA] hover:text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1 ">
                   <span className="relative z-20">Contact Now</span>{" "}
-                  {/* Ensuring text is above the background */}
-                  <div className="ml-2 flex items-center justify-center w-8 h-8 bg-[#4E2FDA] group-hover:bg-white rounded-full relative z-10">
+                  <div className="ml-2 flex items-center justify-center size-6 md:size-8 bg-[#4E2FDA] group-hover:bg-white rounded-full relative z-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 transform -rotate-45 group-hover:rotate-0 text-white group-hover:text-[#4E2FDA] transition-transform duration-300"
+                      className="size-3 md:size-5 transform -rotate-45 group-hover:rotate-0 text-white group-hover:text-[#4E2FDA] transition-transform duration-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -198,7 +199,7 @@ const Index = () => {
                     </svg>
                   </div>
                   <span
-                    className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150" // Adjust duration here if needed
+                    className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150"
                     style={{ transformOrigin: "center" }}
                   ></span>
                 </button>
@@ -217,156 +218,156 @@ const Index = () => {
               <img
                 src="/public/assets/images/elements2.png"
                 alt="Top Right Image"
-                className="absolute lg:top-0 lg:right-36 lg:w-14 lg:h-auto  w-10 -top-4 "
+                className="absolute hidden md:flex md:right-80 md:top-2 lg:top-0 lg:right-36 w-14 lg:h-auto   "
               />
 
               {/* Top Right Image Overlay */}
               <img
                 src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/header-author-img2.png"
                 alt="Top Right Image"
-                className="absolute -top-10  right-0 w-20 lg:w-36 h-auto animate-element"
+                className="absolute md:-top-6 lg:-top-10 hidden md:flex  md:right-44 lg:right-2 w-20 md:w-28 lg:w-36 h-auto animate-element"
               />
 
               {/* Top Right Light Overlay */}
               <img
                 src="/public/assets/images/lite-icons1.svg"
                 alt="Top Right Image"
-                className="absolute top-56  -right-4 w-20 lg:w-20 h-auto animate-bounce-slow"
+                className="absolute md:top-44 lg:top-56  md:right-40 w-20 lg:w-20 h-auto animate-bounce-slow"
               />
 
               {/* Bottom Left Arrow Overlay */}
               <img
                 src="/public/assets/images/elements3.png"
                 alt="Announcement"
-                className="absolute   lg:w-auto lg:h-auto  w-14 bottom-44 left-12   z-0 "
+                className="absolute  hidden md:flex w-auto h-auto lg:bottom-44 lg:left-12  md:bottom-32 md:right-[500px] z-0 "
               />
               {/* behind circle Overlay */}
               <img
                 src="/public/assets/images/header-imgbg.png"
                 alt="Announcement"
-                className="absolute w-[500px] h-auto   left-16  z-0 "
+                className="absolute w-[270px] md:w-[300px] lg:w-[500px] h-auto left-[25px]  overflow-hidden lg:left-16 md:left-[320px] z-0 "
               />
 
               {/* Bottom Left Image Overlay */}
               <img
                 src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/header-author-img1.png"
                 alt="Announcement"
-                className="absolute bottom-20 left-40 lg:-left-10 w-40 lg:w-44 h-auto animate-move"
+                className="absolute hidden md:flex bottom-0 lg:bottom-20 left-20 lg:-left-10 w-56 lg:w-44 h-auto animate-move"
               />
 
               {/* Small Bouncing mug at Top Left */}
               <img
                 src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/sound-icons1.svg"
                 alt="Announcement"
-                className="absolute top-6 left-10 lg:left-20 w-24 lg:w-24 h-auto animate-bounce-slow"
+                className="absolute top-4 lg:top-6 right-[600px] lg:left-20 w-24 lg:w-24 h-auto animate-bounce-slow"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="companies-logo border py-6 px-40 bg-[#EDEAFB]">
+      <div className="companies-logo border py-6 px-4 md:px-20 lg:px-40 bg-[#EDEAFB]">
         <div className="grid grid-cols-12 gap-4 items-center">
           {/* Text Section */}
-          <p className="text-lg font-semibold text-center lg:text-left mb-4 lg:mb-0 col-span-12 lg:col-span-3">
+          <p className="md:text-lg text-sm font-semibold text-center lg:text-left mb-4 lg:mb-0 col-span-12 lg:col-span-3">
             Trusted By <br />
             Top Companies
           </p>
 
           {/* Logo Carousel Container */}
           <div
-            className="col-span-12 lg:col-span-9 grid grid-flow-col gap-6 "
+            className="col-span-12 lg:col-span-9 grid grid-flow-col gap-6 overflow-x-auto"
             ref={carouselRef}
           >
             <img
               src="/public/assets/images/brand-img1.png"
               alt="Google Logo"
-              className="object-contain  w-24"
+              className="object-contain w-20 md:w-24"
             />
             <img
               src="/public/assets/images/brand-img2.png"
               alt="Microsoft Logo"
-              className="object-contain   w-24"
+              className="object-contain w-20 md:w-24"
             />
             <img
               src="/public/assets/images/brand-img3.png"
               alt="Airbnb Logo"
-              className="object-contain  w-24"
+              className="object-contain w-20 md:w-24"
             />
             <img
               src="/public/assets/images/brand-img4.png"
               alt="Amazon Logo"
-              className="object-contain  w-24"
+              className="object-contain w-20 md:w-24"
             />
             <img
               src="/public/assets/images/brand-img5.png"
               alt="FedEx Logo"
-              className="object-contain  w-24"
+              className="object-contain w-20 md:w-24"
             />
           </div>
         </div>
       </div>
 
-      <div className="lg:px-40  bg-[#F0E4FA]  ">
-        <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-x-12    mx-auto">
-          <div className=" left-image relative mt-16">
-            <div className="relative  w-[320px] md:w-[320px] h-[350px] md:h-[450px] overflow-hidden rounded-full group">
-              {/* Main Image */}
+      <section
+        id="about"
+        className="border md:py-6 px-6 md:px-16 lg:px-40 bg-[#F0E4FA]"
+      >
+        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-12 mx-auto">
+          {/* Left Image Container */}
+          <div className="left-image relative mt-4 md:mt-16 flex justify-center lg:block">
+            <div className="relative  w-[230px] h-[300px] md:w-[320px] md:h-[450px] overflow-hidden rounded-full group">
               <img
                 src="/public/assets/images/about-img1.png"
                 alt="Man Holding Laptop"
                 className="w-full h-full object-cover relative z-10"
               />
-
-              {/* Diagonal Growing White Shadow Overlay with Skew */}
-              <div className="absolute inset-0 bg-white opacity-0  group-hover:animate-fadeAndGrow  z-20"></div>
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
             </div>
-            {/* Star Image */}
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Star.png"
               alt="Star"
-              className="size-14 bottom-64 left-1 animate-[spin_30s_linear_reverse_infinite] absolute "
+              className="w-8 sm:w-10 absolute bottom-9 md:bottom-16 sm:bottom-24 left-2 animate-[spin_30s_linear_reverse_infinite]"
             />
           </div>
 
-          <div className="center-image text-center md:text-left md:px-4">
+          {/* Center Content */}
+          <div className="center-image text-center lg:text-left md:px-4 flex flex-col items-center lg:items-start">
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Arc.png"
               alt="Arc"
-              className="mx-auto size-36 md:mx-0 animate-[spin_30s_linear_reverse_infinite] mt-20"
+              className="w-20 md:w-36 animate-[spin_30s_linear_reverse_infinite] mt-8 md:mt-20"
             />
             <p
-              className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold mt-6 "
+              className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-4 md:mt-6"
               style={{ lineHeight: "1.3" }}
             >
               Comprehensive SEO & Digital Marketing Solutions.
             </p>
             <p
               id="text"
-              className={`mt-4 text-gray-500 text-xs md:text-sm ${
+              className={`mt-4 text-gray-500 text-xs md:text-base ${
                 isVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
               } transition-all duration-500 delay-100`}
             >
-              Welcome to SEOC your trusted partner <br /> for comprehensive SEO
-              and digital <br /> marketing solutions. With our proven expertise
-              and innovative strategies in the digital landscape.
+              Welcome to SEOC, your trusted partner for comprehensive SEO and
+              digital marketing solutions, with proven expertise and innovative
+              strategies.
             </p>
-
             <button
               id="button"
-              className={`bg-[#4E2FDA] relative overflow-hidden text-sm  font-medium text-white rounded-full mt-4 pl-4 pr-2 py-2 flex hover:-translate-y-1 items-center group transition-transform duration-200 ${
+              className={`bg-[#4E2FDA] mt-4 text-white rounded-full px-4 py-2 flex items-center group text-xs md:text-sm transition-transform duration-200 ${
                 isVisibleButton
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
-              } delay-200`}
+              }`}
             >
               <span className="relative z-20">Learn More</span>
-              <div className="ml-2 flex items-center justify-center size-7 bg-white rounded-full relative z-10">
+              <div className="ml-2 flex items-center justify-center w-7 h-7 bg-white rounded-full relative z-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-4 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
+                  className="w-4 h-4 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -386,30 +387,27 @@ const Index = () => {
             </button>
           </div>
 
-          <div className="right-center relative pt-44 pb-4">
-            <div className="relative h-[250px] w-[200px] md:h-[380px] md:w-[230px] overflow-hidden rounded-full group">
+          {/* Right Image Container */}
+          <div className="right-image relative pt-6 md:pt-44 pb-4 flex justify-center lg:block">
+            <div className="relative  w-[210px] h-[300px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
               <img
                 src="/public/assets/images/about-img2.png"
                 alt="Microsoft Logo"
-                className="w-full h-full object-cover relative z-10 "
+                className="w-full h-full object-cover relative z-10"
               />
-
-              {/* Diagonal Growing White Shadow Overlay */}
               <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
             </div>
-
-            {/* Galaxy Image - Positioned outside, above the div */}
             <img
               src="https://seoc-html-v2.vercel.app/assets/img/elements/elements5.png"
               alt="Galaxy"
-              className="absolute h-28 top-24 -right-6 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
+              className="w-24 md:w-40 absolute top-2 md:top-24 right-2 md:right-52 lg:-right-6 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
             />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-[#F1E6F7] ">
-        <div className="relative text-center max-w-screen-md py-8  mx-auto px-4 sm:px-8">
+      <section id="services" className="bg-[#F1E6F7]">
+        <div className="relative text-center max-w-screen-md py-20  mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -442,65 +440,65 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  bg-[#F0E4FA] md:px-8 lg:px-40 mt-4 pb-6">
-          <div className="flex flex-col space-y-8 bg-[#FEBFDA] p-6 text-center">
-            <p className="font-medium text-nowrap text-base">
+          <div className="flex flex-col space-y-4 md:space-y-8 bg-[#FEBFDA] p-6 text-center">
+            <p className="font-medium text-nowrap text-sm md:text-base">
               Search Engine Optimization <br />
               (SEO)
             </p>
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Group-1171276180.png"
               alt="SEO Image"
-              className="size-[90px] mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
+              className="md:size-[90px] size-[70px] mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
             />
 
-            <p className="text-gray-800  text-sm  ">
+            <p className="text-gray-800  text-xs md:text-sm ">
               Enhance your online visibility & drive organic traffic with our
               advanced SEO techniques. We optimize your website to rank higher.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-8 bg-[#CAC6FD] p-6 text-center">
-            <p className="font-medium text-base ">
+          <div className="flex flex-col space-y-4 md:space-y-8 bg-[#CAC6FD] p-6 text-center">
+            <p className="font-medium text-sm md:text-base ">
               Pay-Per-Click (PPC) Advertising
             </p>
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Group-1171276186.png"
               alt="SEO Image"
-              className="size-[90px]  mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
+              className="md:size-[90px] size-[70px] mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
             />
-            <p className="text-gray-800  text-sm  ">
+            <p className="text-gray-800  text-xs md:text-sm ">
               Reach your audience instantly and drive qualified leads with
               targeted PPC campaigns. Our experts craft compelling ad copy and
               optimize.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-8 bg-[#FFE8A4] p-6 text-center">
-            <p className="font-medium text-base text-nowrap mb-6">
+          <div className="flex flex-col space-y-2 md:space-y-8 bg-[#FFE8A4] p-6 text-center">
+            <p className="font-medium text-sm md:text-base text-nowrap mb-6">
               Social Media Marketing{" "}
             </p>
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Group-1171276187.png"
               alt="SEO Image"
-              className="size-[90px]  mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
+              className="md:size-[90px] size-[70px] mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
             />
-            <p className="text-gray-800  text-sm  ">
+            <p className="text-gray-800  text-xs md:text-sm  ">
               Build a strong brand presence and engage with your audience on
               social media platforms. We create strategic social media campaigns
               to boost brand.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-8 bg-[#D4FFD6] p-6 text-center">
-            <p className="font-medium text-base ">
+          <div className="flex flex-col space-y-4 md:space-y-8 bg-[#D4FFD6] p-6 text-center">
+            <p className="font-medium text-sm md:text-base ">
               Website Design and Development{" "}
             </p>
             <img
               src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/Group-1171276188.png"
               alt="SEO Image"
-              className="size-[90px]  mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
+              className="md:size-[90px] size-[70px]  mx-auto duration-300 ease-in-out transform hover:scale-x-[-1]"
             />
-            <p className="text-gray-800  text-sm  ">
+            <p className="text-gray-800  text-xs md:text-sm ">
               Make a lasting impression with a professionally designed and
               user-friendly website. Our web design and development services
               ensure website.
@@ -509,7 +507,7 @@ const Index = () => {
         </div>
 
         <div className="flex items-center justify-center">
-          <button className="bg-[#4E2FDA] relative overflow-hidden text-sm   font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
+          <button className="bg-[#4E2FDA] relative overflow-hidden text-xs md:text-sm  font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
             <span className="relative z-20">View More Services</span>
             <div className="ml-2 flex items-center justify-center w-8 h-8 bg-white rounded-full relative z-10">
               <svg
@@ -533,8 +531,10 @@ const Index = () => {
             ></span>
           </button>
         </div>
+      </section>
 
-        <div className="relative text-center max-w-screen-md py-6 mt-2 mx-auto px-4 sm:px-8">
+      <section id="works" className="bg-[#F1E6F7] ">
+        <div className="relative text-center max-w-screen-md py-20  mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -568,61 +568,59 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-12 gap-2 md:gap-6 lg:gap-12 md:px-8 lg:px-40 mx-auto mt-2 py-6">
-        <div className="lg:col-span-7 col-span-12 relative group">
-  {/* Image with hover effects */}
-  <div className="relative overflow-hidden rounded-lg">
-    <img
-      src="/public/assets/images/service-img1.png"
-      alt="Service Image"
-      className="lg:h-[520px] w-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-4deg]"
-    />
-  </div>
+          <div className="lg:col-span-7 col-span-12 relative group">
+            {/* Image with hover effects */}
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src="/public/assets/images/service-img1.png"
+                alt="Service Image"
+                className="lg:h-[520px] h-[350px]  w-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-4deg]"
+              />
+            </div>
 
-  {/* Content */}
-  <div className="absolute bottom-4 left-4 right-4 space-y-3 p-4 rounded-lg sm:mt-4 sm:static sm:w-full sm:p-4 sm:space-y-3 sm:left-0 sm:right-0 lg:absolute lg:bottom-4 lg:left-4 lg:right-4 lg:space-y-3 lg:p-4 lg:rounded-lg">
-    <p className="font-semibold text-white text-sm md:text-base">
-      Our Value
-    </p>
-    <p className="text-lg md:text-xxl lg:text-2xl font-semibold text-white cursor-pointer">
-      Explore Our Unique Value Proposition & How We Drive Business Growth
-    </p>
-    <p className="text-white text-sm mt-2">
-      we're committed to delivering exceptional value to our clients. We
-      understand that every business is unique, personalized approach to every
-      project we undertake.
-    </p>
+            {/* Content */}
+            <div className="absolute bottom-1 md:bottom-4 left-4 right-4 space-y-1 md:space-y-3 p-2 md:p-4 rounded-lg sm:w-full sm:p-4 sm:space-y-3 sm:left-0 sm:right-0 absolute lg:bottom-4 lg:left-4 lg:right-4 lg:space-y-3 lg:p-4 lg:rounded-lg">
+              <p className="font-semibold text-white text-xs md:text-base">
+                Our Value
+              </p>
+              <p className="text-base md:text-xxl lg:text-2xl font-semibold text-white cursor-pointer">
+                Explore Our Unique Value Proposition & How We Drive Business
+                Growth
+              </p>
+              <p className="text-white text-xs ">
+                we're committed to delivering exceptional value to our clients.
+                We understand that every business is unique, personalized
+                approach to every project we undertake.
+              </p>
 
-    <button
-      id="button"
-      className="bg-[#4E2FDA] relative overflow-hidden text-sm font-medium text-white rounded-full mt-8 pl-4 pr-2 py-2 flex hover:-translate-y-1 items-center group transition-transform duration-200"
-    >
-      <span className="relative z-20">Learn More</span>
-      <div className="ml-2 flex items-center justify-center size-7 bg-white rounded-full relative z-10">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-4 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 12h14M12 5l7 7-7 7"
-          />
-        </svg>
-      </div>
-      <span
-        className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150"
-        style={{ transformOrigin: "center" }}
-      ></span>
-    </button>
-  </div>
-</div>
-
-
-
+              <button
+                id="button"
+                className="bg-[#4E2FDA] relative overflow-hidden text-xs md:text-sm font-medium text-white rounded-full mt-4 md:mt-8 pl-4 pr-2 py-1 md:py-2 flex hover:-translate-y-1 items-center group transition-transform duration-200"
+              >
+                <span className="relative z-20">Learn More</span>
+                <div className="ml-2 flex items-center justify-center size-7 bg-white rounded-full relative z-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-4 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+                <span
+                  className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150"
+                  style={{ transformOrigin: "center" }}
+                ></span>
+              </button>
+            </div>
+          </div>
 
           <div className="lg:col-span-5 col-span-12 space-y-4">
             <div className="bg-[#C8BFF4] rounded-lg space-y-4 p-6 group transition-all duration-300 hover:translate-y-[-0.5rem]">
@@ -696,8 +694,10 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="relative text-center max-w-screen-md py-6 mt-2 mx-auto px-4 sm:px-8">
+      <section id="benefits" className="bg-[#F1E6F7] ">
+        <div className="relative text-center max-w-screen-md py-20  mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -732,8 +732,10 @@ const Index = () => {
         <div>
           <Accordion />
         </div>
+      </section>
 
-        <div className="relative text-center max-w-screen-md py-6 mt-4 mx-auto px-4 sm:px-8">
+      <section id="testimonials" className="bg-[#F1E6F7] ">
+        <div className="relative text-center max-w-screen-md py-20 mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -768,45 +770,52 @@ const Index = () => {
         <div className="w-full mt-6 overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500"
-            style={{ transform: `translateX(-${(currentIndex * 100) / 3}%)` }}
+            style={{ transform: `translateX(-${(currentIndex * 100) / 2.5}%)` }}
           >
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="md:w-[60%] w-full flex-shrink-0 flex border-2 border-blue-500 rounded-lg overflow-hidden md:flex-row flex-col"
+                className="md:w-[60%] w-full flex-shrink-0 flex border-2 border-blue-500 rounded-lg overflow-hidden md:flex-row flex-col justify-between"
               >
-                <div className="w-full md:w-1/2 p-6 bg-white items-center">
-                  <p className="text-gray-700 mt-2 text-sm ">{card.text}</p>
-                  <div className="flex justify-between items-center">
-                    <div className="mt-5 space-y-2">
+                <div className="w-full flex flex-col md:w-1/2 p-2 md:p-4 bg-white space-x-2">
+                  {/* Topmost Text */}
+                  <p className="text-gray-700  mt-2 text-xs md:text-sm">
+                    {card.text}
+                  </p>
+
+                  {/* Bottom Section: Stars, Reviewer, and Google Icon */}
+                  <div className="flex justify-between items-center w-full md:mt-auto mt-3">
+                    <div className="flex flex-col items-start space-y-1 ">
                       {/* Five Star Review Icons */}
-                      <div className="flex text-blue-800">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
+                      <div className="flex text-blue-800 space-x-1">
+                        <i className="fas fa-star text-xs md:text-sm"></i>
+                        <i className="fas fa-star text-xs md:text-sm"></i>
+                        <i className="fas fa-star text-xs md:text-sm"></i>
+                        <i className="fas fa-star text-xs md:text-sm"></i>
+                        <i className="fas fa-star text-xs md:text-sm"></i>
                       </div>
                       {/* Reviewer Name */}
-                      <p className="text-gray-800 font-semibold">
+                      <p className="text-gray-800 text-sm md:text-base font-semibold">
                         {card.reviewer}
                       </p>
                     </div>
+
                     {/* Google Icon */}
-                    <div className="items-center">
+                    <div>
                       <img
                         src="/assets/images/download.png"
                         alt="Google Icon"
-                        className="size-8"
+                        className="w-8 h-8"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-1/2">
+
+                <div className="w-full md:w-1/2 ">
                   <img
                     src={card.image}
                     alt="Card Image"
-                    className="object-cover h-96 w-full"
+                    className=" h-60 md:h-80 w-full object-cover"
                   />
                 </div>
               </div>
@@ -832,8 +841,10 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="relative text-center max-w-screen-md py-6 mt-4 mx-auto px-4 sm:px-8">
+      <section id="blogs" className="bg-[#F1E6F7] ">
+        <div className="relative text-center max-w-screen-md py-20  mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -1038,8 +1049,10 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="relative text-center max-w-screen-md py-6 mt-4 mx-auto px-4 sm:px-8">
+      <section id="contact" className="bg-[#F1E6F7] ">
+        <div className="relative text-center max-w-screen-md py-20 mx-auto px-4 sm:px-8">
           <div>
             <p
               className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
@@ -1211,66 +1224,65 @@ const Index = () => {
             </form>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="pt-12 bg-[#F1E6F7]">
-      <div className="bg-[#4E2FDA] text-white flex items-center justify-center min-h-[200px] md:min-h-[400px] relative overflow-hidden ">
-        {/* Bottom Left Image */}
-        <img
-          src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/cta-bg2.png"
-          alt="Bottom Left Background"
-          className="absolute -bottom-16 left-0 size-40 md:size-80 object-contain animate-bounce-slow "
-        />
+        <div className="bg-[#4E2FDA] text-white flex items-center justify-center min-h-[200px] md:min-h-[400px] relative overflow-hidden ">
+          {/* Bottom Left Image */}
+          <img
+            src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/cta-bg2.png"
+            alt="Bottom Left Background"
+            className="absolute -bottom-16 left-0 size-40 md:size-80 object-contain animate-bounce-slow "
+          />
 
-        {/* Top Right Image */}
-        <img
-          src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/cta-bg1.png"
-          alt="Top Right Background"
-          className="absolute -top-10 right-0 size-40 md:size-80 object-contain animate-move"
-        />
+          {/* Top Right Image */}
+          <img
+            src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/cta-bg1.png"
+            alt="Top Right Background"
+            className="absolute -top-10 right-0 size-40 md:size-80 object-contain animate-move"
+          />
 
-        <div className="text-center p-6">
-          <p
-            className="font-semibold text-xl lg:text-3xl mb-4 "
-            style={{ lineHeight: "1.4" }}
-          >
-            Ready to Take Your SEO to <br /> The Next Level{" "}
-          </p>
+          <div className="text-center p-6">
+            <p
+              className="font-semibold text-xl lg:text-3xl mb-4 "
+              style={{ lineHeight: "1.4" }}
+            >
+              Ready to Take Your SEO to <br /> The Next Level{" "}
+            </p>
 
-          <p
-            className="text-white text-xs md:text-sm"
-            style={{ lineHeight: "1.4" }}
-          >
-            Effective SEO strategies not only elevate a websites visibility but
-            also drive <br /> targeted traffic, enhance user experience
-          </p>
+            <p
+              className="text-white text-xs md:text-sm"
+              style={{ lineHeight: "1.4" }}
+            >
+              Effective SEO strategies not only elevate a websites visibility
+              but also drive <br /> targeted traffic, enhance user experience
+            </p>
 
-          {/* Wrapper for text and button */}
-          <div className="flex flex-col items-center mt-12">
-            <button className="bg-white   relative overflow-hidden text-xs md:text-sm  font-medium hover:bg-[#2E00FF] hover:text-white text-[#4E2FDA] rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
-              <span className="relative z-20">Free Consultation</span>{" "}
-              {/* Ensuring text is above the background */}
-              <div className="ml-2 flex items-center justify-center w-8 h-8 bg-[#4E2FDA] group-hover:bg-white rounded-full relative z-10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 transform -rotate-45 group-hover:rotate-0 text-white group-hover:text-[#4E2FDA] transition-transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 12h14M12 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </button>
+            {/* Wrapper for text and button */}
+            <div className="flex flex-col items-center mt-12">
+              <button className="bg-white   relative overflow-hidden text-xs md:text-sm  font-medium hover:bg-[#2E00FF] hover:text-white text-[#4E2FDA] rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1">
+                <span className="relative z-20">Free Consultation</span>{" "}
+                {/* Ensuring text is above the background */}
+                <div className="ml-2 flex items-center justify-center w-8 h-8 bg-[#4E2FDA] group-hover:bg-white rounded-full relative z-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 transform -rotate-45 group-hover:rotate-0 text-white group-hover:text-[#4E2FDA] transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-
       </div>
     </div>
   );

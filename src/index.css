@@ -1,11 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(
     to bottom right,
-    #ecbbec,
+    #e7bce7,
     #f1ebf1,
     #f0f8ff,
     #b6acdd
@@ -24,6 +28,22 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 4s infinite;
 }
+
+@keyframes grow {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: grow 0.6s ease-in-out forwards;
+}
+
 
 @keyframes fadeAndGrow {
   0% {

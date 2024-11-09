@@ -21,11 +21,6 @@ const Accordion = () => {
         "Analytics & Reporting"
     ];
 
-    // Function to reverse words
-    const reverseWords = (title) => {
-        return title.split(" ").reverse().join(" ");
-    };
-
     const images = [
         "/public/assets/images/case-img1.png",
         "/public/assets/images/case-img2.png",
@@ -46,7 +41,7 @@ const Accordion = () => {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10">
+                    <div className="absolute inset-0 flex flex-col justify-end px-8 py-4 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10">
                         {/* Title */}
                         <span
                             className={`text-lg font-medium text-white transition-all duration-300 transform 
@@ -57,12 +52,10 @@ const Accordion = () => {
                                 writingMode: expandedIndex === index ? 'horizontal-tb' : 'vertical-lr',
                                 transformOrigin: 'left',
                                 textAlign: expandedIndex === index ? 'left' : 'right',
+                                transform: expandedIndex === index ? 'none' : 'rotate(180deg)', // Rotate text -90deg for vertical orientation
                             }}
                         >
-                            {/* Show reversed text only if not hovered */}
-                            {expandedIndex === index 
-                                ? titles[index] 
-                                : reverseWords(titles[index])}
+                            {titles[index]}
                         </span>
                         {/* Description */}
                         {expandedIndex === index && (
