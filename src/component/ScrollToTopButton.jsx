@@ -26,10 +26,10 @@ const ScrollToTopButton = () => {
   return (
     scrollProgress > 0 && (
       <div
-        className="fixed bottom-8 right-8 w-16 h-16 flex items-center justify-center text-black z-50 cursor-pointer transition-opacity duration-300"
+        className="fixed bottom-8 right-8 w-16 h-16 flex items-center group justify-center  z-50 cursor-pointer transition-opacity duration-300"
         onClick={scrollToTop}
       >
-        <svg width="60" height="60" className="absolute ">
+        <svg width="60" height="60" className="absolute fill-transparent  group-hover:fill-black">
           {/* Gray background circle */}
           <circle
             cx="30"
@@ -37,7 +37,6 @@ const ScrollToTopButton = () => {
             r={circleRadius}
             stroke="#d3d3d3" // Light gray color
             strokeWidth="2"
-            fill="none"
           />
           {/* Black progress circle */}
           <circle
@@ -62,7 +61,7 @@ const ScrollToTopButton = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-6 h-6 text-black relative z-10"
+          className="w-6 h-6 text-black group-hover:text-white relative z-10"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7 7 7M12 21V3" />
         </svg>

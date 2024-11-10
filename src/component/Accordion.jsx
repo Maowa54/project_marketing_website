@@ -32,7 +32,7 @@ const Accordion = () => {
     ];
 
     return (
-        <div className="flex flex-col lg:flex-row lg:px-40 mt-4 py-2 mx-auto justify-center gap-3">
+        <div className="flex flex-col lg:flex-row lg:px-40 mt-4 py-2 mx-auto justify-center gap-3 scale-down-animation">
             {images.map((src, index) => (
                 <article
                     key={src}
@@ -59,7 +59,7 @@ const Accordion = () => {
                         </span>
                         {/* Description */}
                         {expandedIndex === index && (
-                            <p className={`text-sm text-white mt-2 transition-all duration-500 transform 
+                            <p className={`text-sm text-white mt-2 transition-all duration-500 hover:transform animate__animated animate__fadeInLeft fade-in-left
                                 ${expandedIndex === index ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full'}`}>
                                 We understand the critical role that a well-designed and user-friendly website plays in shaping your online presence and driving business success.
                             </p>
