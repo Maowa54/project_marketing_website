@@ -1,12 +1,9 @@
 import Button from "../component/Button";
 import Dropdown from "../component/Dropdown";
-import {
-    FaPhoneAlt,
-    FaEnvelope,
-    FaMapMarkerAlt,
-  
-  } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const Contact = () => {
+  const sentence = "Get In Touch With Us Today";
+  const words = sentence.split(" "); // Split sentence into individual words
   return (
     <div>
       <div className="relative text-center max-w-screen-md py-20 mx-auto px-4 sm:px-8">
@@ -15,10 +12,20 @@ const Contact = () => {
             className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
             style={{ lineHeight: "1.3" }}
           >
-            Get In Touch With Us Today{" "}
+            {words.map((word, index) => (
+              <span
+                key={index}
+                data-aos="fade-left"
+                data-aos-delay={index * 100} // Delay each word slightly more than the previous
+                className="inline-block mr-2" // Ensure words are inline with space between
+              >
+                {word}
+              </span>
+            ))}
           </p>
           <p
-            className="text-gray-500 text-xs md:text-sm fade-in-up"
+            data-aos="fade-up"
+            className="text-gray-500 text-xs md:text-sm"
             style={{ lineHeight: "1.6" }}
           >
             We’re here to help! If you have any questions or would like to
@@ -44,7 +51,10 @@ const Contact = () => {
 
       <div className="md:px-8 lg:px-40 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 mx-auto mt-2 py-2 md:py-4">
         {/* Contact Info Column */}
-        <div className="col-span-12 md:col-span-5 py-8 px-4  md:px-8 bg-black bg-opacity-95 rounded-md scale-down-animation">
+        <div
+          data-aos="zoom-out"
+          className="col-span-12 md:col-span-5 py-8 px-4  md:px-8 bg-black bg-opacity-95 rounded-md "
+        >
           <p className=" font-medium md:text-lg mb-4 text-white">
             Contact Info
           </p>
@@ -97,7 +107,10 @@ const Contact = () => {
         </div>
 
         {/* Get In Touch Column */}
-        <div className="col-span-12 md:col-span-7 p-6 md:p-8 bg-white rounded-md scale-down-animation">
+        <div
+          data-aos="zoom-out"
+          className="col-span-12 md:col-span-7 p-6 md:p-8 bg-white rounded-md "
+        >
           <p className="text-lg font-medium md:text-xl mb-4">Get In Touch</p>
           <p className="text-gray-600 text-xs md:text-sm mb-6">
             We’re here to help! If you have any questions or would like to

@@ -34,19 +34,18 @@ body {
 
 @keyframes grow {
   0% {
-      transform: scale(0.5);
-      opacity: 0;
+    transform: scale(0.5);
+    opacity: 0;
   }
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 .fadeIn {
   animation: grow 0.6s ease-in-out forwards;
 }
-
 
 @keyframes move {
   0% {
@@ -64,8 +63,6 @@ body {
   animation: move 3s ease-in-out infinite; /* Duration and easing stay the same */
 }
 
-
-
 @keyframes element {
   0% {
     transform: translateX(0);
@@ -82,8 +79,6 @@ body {
   animation: element 3s ease-in-out infinite; /* Duration and easing stay the same */
 }
 
-
-
 /* Image animation */
 
 .group:hover .bg-blue-500 {
@@ -91,7 +86,6 @@ body {
   transform: translateY(0);
   filter: blur(4px); /* This will blur the background */
 }
-
 
 @keyframes shine {
   0% {
@@ -149,113 +143,6 @@ body {
 }
 
 
-
-/* About animation */
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in-right {
-  animation: fadeInRight 1s ease forwards;
-}
-
-
-/* Services animation */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(100px);
-  }
-}
-
-.fade-in-down {
-  animation: fadeInDown 1s ease forwards;
-}
-
-
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.zoom-in-animation {
-  animation: zoomIn 1s ease-out forwards;
-}
-
-
-@keyframes scaleDownSmooth {
-  0% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.scale-down-animation {
-  animation: scaleDownSmooth 1s cubic-bezier(0.25, 0.8, 0.5, 1) forwards; /* Adjust duration as needed */
-}
-
-@keyframes revealText {
-  0% {
-    opacity: 0;
-    transform: translateY(10px); /* Start a bit lower */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* End in the original position */
-  }
-}
-
-.reveal-word {
-  opacity: 0; /* Hidden by default */
-  animation: revealText 0.4s ease forwards; /* Animation duration */
-}
-
-
-
-
-
-
-
-
 /* Accordion animation */
 
 @keyframes fadeInLeft {
@@ -265,12 +152,12 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateX(50);
+    transform: translateX(50px);
   }
 }
 
 .fade-in-left {
-  animation: fadeInLeft 1s ease forwards;
+  animation: fadeInLeft 0.5s ease forwards;
 }
 
 

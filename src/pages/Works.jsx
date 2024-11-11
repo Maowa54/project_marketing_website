@@ -1,4 +1,6 @@
 const Works = () => {
+  const sentence = "Tailored Solutions, Proven Result and Exceptional Service";
+  const words = sentence.split(" "); // Split sentence into individual words
   return (
     <div>
       <div className="relative text-center max-w-screen-md py-20  mx-auto px-4 sm:px-8">
@@ -7,10 +9,20 @@ const Works = () => {
             className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
             style={{ lineHeight: "1.3" }}
           >
-            Tailored Solutions, Proven Result and Exceptional Service{" "}
+             {words.map((word, index) => (
+              <span
+                key={index}
+                data-aos="fade-left"
+                data-aos-delay={index * 100} // Delay each word slightly more than the previous
+                className="inline-block mr-2" // Ensure words are inline with space between
+              >
+                {word}
+              </span>
+            ))}
           </p>
           <p
-            className="text-gray-500 text-xs md:text-sm fade-in-up"
+            data-aos="fade-up"
+            className="text-gray-500 text-xs md:text-sm "
             style={{ lineHeight: "1.6" }}
           >
             We pride ourselves on delivering a value proposition that goes
@@ -34,19 +46,25 @@ const Works = () => {
         />
       </div>
 
-      <div className="grid grid-cols-12 gap-2 md:gap-6 lg:gap-12 md:px-8 lg:px-40 mx-auto mt-2 py-6">
-        <div className="lg:col-span-7 col-span-12 relative group zoom-in-animation">
+      <div className="grid grid-cols-12 gap-2 md:gap-6 lg:gap-12 md:px-8 lg:px-40 mx-auto  py-6">
+        <div
+          data-aos="zoom-in"
+          className="lg:col-span-7 col-span-12 relative group "
+        >
           {/* Image with hover effects */}
           <div className="relative overflow-hidden rounded-lg">
             <img
-              src="/public/assets/images/service-img1.png"
+              src="/assets/images/service-img1.png"
               alt="Service Image"
               className="lg:h-[520px] h-[350px]  w-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-4deg]"
             />
           </div>
 
           {/* Content */}
-          <div className=" bottom-1 md:bottom-4 left-4 right-4 space-y-1 fade-in-up md:space-y-3 p-2 md:p-4 rounded-lg sm:w-full sm:p-4 sm:space-y-3 sm:left-0 sm:right-0 absolute lg:bottom-4 lg:left-4 lg:right-4 lg:space-y-3 lg:p-4 lg:rounded-lg">
+          <div
+            data-aos="fade-up"
+            className=" bottom-1 md:bottom-4 left-4 right-4 space-y-1 md:space-y-3 p-2 md:p-4 rounded-lg sm:w-full sm:p-4 sm:space-y-3 sm:left-0 sm:right-0 absolute lg:bottom-4 lg:left-4 lg:right-4 lg:space-y-3 lg:p-4 lg:rounded-lg"
+          >
             <p className="font-semibold text-white text-xs md:text-base">
               Our Value
             </p>
@@ -90,7 +108,10 @@ const Works = () => {
         </div>
 
         <div className="lg:col-span-5 col-span-12 space-y-4">
-          <div className="bg-[#C8BFF4] rounded-lg space-y-4 p-6 group fade-in-down transition-all duration-300 hover:translate-y-[-0.5rem]">
+          <div
+            data-aos="fade-down"
+            className="bg-[#C8BFF4] rounded-lg space-y-4 p-6 group  transition-all duration-300 hover:translate-y-[-0.5rem]"
+          >
             {/* Add 'group' class here */}
             <div className="flex justify-between">
               <p className="font-semibold text-[#4E2FDA] mt-6 text-sm md:text-base">
@@ -125,7 +146,10 @@ const Works = () => {
             </p>
           </div>
 
-          <div className="bg-[#FEBFDA] rounded-lg space-y-4 p-6 group transition-all fade-in-up duration-300 hover:translate-y-[-0.5rem]">
+          <div
+            data-aos="fade-up"
+            className="bg-[#FEBFDA] rounded-lg space-y-4 p-6 group transition-all  duration-300 hover:translate-y-[-0.5rem]"
+          >
             {/* Add 'group' class here */}
             <div className="flex justify-between">
               <p className="font-semibold text-[#FB3189] text-sm md:text-base mt-6">

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
 const Testimonials = () => {
+  const sentence = "What Our Client Say On Google Reviews";
+  const words = sentence.split(" "); // Split sentence into individual words
   const cards = [
     {
       id: 1,
@@ -51,10 +53,20 @@ const Testimonials = () => {
             className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold py-2 "
             style={{ lineHeight: "1.3" }}
           >
-            What Our Client Say On Google Reviews{" "}
+              {words.map((word, index) => (
+              <span
+                key={index}
+                data-aos="fade-left"
+                data-aos-delay={index * 100} // Delay each word slightly more than the previous
+                className="inline-block mr-2" // Ensure words are inline with space between
+              >
+                {word}
+              </span>
+            ))}
           </p>
           <p
-            className="text-gray-500 text-xs md:text-sm fade-in-up"
+            data-aos="fade-up"
+            className="text-gray-500 text-xs md:text-sm "
             style={{ lineHeight: "1.6" }}
           >
             Don't just take our word for it. Hear what our satisfied clients
