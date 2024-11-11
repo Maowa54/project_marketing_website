@@ -9,7 +9,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-12 mx-auto">
         {/* Left Image Container */}
         <div className="left-image relative mt-4 md:mt-16 flex justify-center lg:block">
-          <div className="relative  w-[230px] h-[300px] md:w-[320px] md:h-[450px] overflow-hidden rounded-full group">
+          <div className="relative  w-[300px] h-[400px] md:w-[320px] md:h-[450px] overflow-hidden rounded-full group">
             <img
               src="/assets/images/about-img1.png"
               alt="Man Holding Laptop"
@@ -86,8 +86,8 @@ const About = () => {
         </div>
 
         {/* Right Image Container */}
-        <div className="right-image relative pt-6 md:pt-44 pb-4 flex justify-center lg:block">
-          <div className="relative  w-[210px] h-[300px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
+        <div className="right-image relative pt-12 md:pt-44 pb-4 flex justify-center lg:block">
+          <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
             <img
               src="/assets/images/about-img2.png"
               alt="Microsoft Logo"
@@ -99,7 +99,7 @@ const About = () => {
           <img
             src="https://seoc-html-v2.vercel.app/assets/img/elements/elements5.png"
             alt="Galaxy"
-            className="w-24 md:w-40 absolute top-2 md:top-24 right-2 md:right-52 lg:-right-6 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
+            className="w-28 md:w-40 absolute top-2 md:top-24 right-2 md:right-52 lg:-right-6 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
           />
         </div>
       </div>

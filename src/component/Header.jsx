@@ -1,3 +1,12 @@
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -17,7 +26,8 @@ const Header = () => {
   // Check the scroll position and toggle the sticky class
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // When scrolled down by 50px or more
+      if (window.scrollY > 50) {
+        // When scrolled down by 50px or more
         setIsSticky(true);
         setShowHeader(true); // Show header when scrolling
       } else {
@@ -27,7 +37,7 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Clean up the event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -141,8 +151,13 @@ const Header = () => {
               </svg>
             </button>
           </div>
-
           {/* Mobile Menu Items */}
+          <a
+            href="/"
+            className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b transition-colors duration-300"
+          >
+            Home
+          </a>
           {menuItems.map((item, index) => (
             <a
               key={index}
@@ -153,6 +168,100 @@ const Header = () => {
               {item.name}
             </a>
           ))}
+          <div className="mx-auto">
+            <button
+              id="button"
+              className="bg-[#4E2FDA] relative overflow-hidden text-sm font-medium text-white rounded-full mt-4 px-6 py-2 flex items-center group transition-transform duration-200 hover:-translate-y-1 "
+            >
+              <span className="relative z-20">Get Started</span>
+              <div className="ml-2 flex items-center justify-center size-7 bg-white rounded-full relative z-10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 transform -rotate-45 group-hover:rotate-0 text-[#4E2FDA] transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 12h14M12 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+              <span
+                className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150 z-0"
+                style={{ transformOrigin: "center" }}
+              ></span>
+            </button>
+          </div>{" "}
+          <div className="my-4 px-6 py-3 space-y-4">
+           
+
+            <div>
+              <div>
+                <p className=" text-lg font-semibold">Contact Info </p>
+                <div className="flex mt-2">
+                  <FaPhoneAlt className="text-sm" />
+                  <p className="ml-2 text-xs f">+880 1625885658</p>
+                </div>
+                <div className="flex mt-2">
+                  <FaEnvelope className="text-sm" />
+                  <p className="ml-2 text-xs f">help@gmail.com</p>
+                </div>{" "}
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <div>
+                  <p className=" text-lg font-semibold">Our Location </p>
+                  <div className="flex mt-2">
+                    <FaMapMarkerAlt className="text-sm" />
+                    <p className="ml-2 text-xs f">
+                      {" "}
+                      8708 Technology Forest Pl Suite 125 -G, The Woodlands, TX
+                      773
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-lg font-semibold">Social Links</p>
+              <div className="flex  gap-3 mt-3">
+                <a
+                  href="https://www.facebook.com/attireidyllbd/"
+                  aria-label="Facebook"
+                  className="flex items-center justify-center size-8 md:size-9 rounded-full bg-gray-300 text-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ease-in-out"
+                >
+                  <FaFacebookF className="text-sm" />
+                </a>
+                <a
+                  href="https://whatsapp.com"
+                  className="flex items-center justify-center size-8 md:size-9 rounded-full bg-gray-300 text-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ease-in-out"
+                >
+                  <FaTwitter className="text-sm" la />
+                </a>
+                <a
+                  href="https://www.instagram.com/attire_idyll/channel/"
+                  aria-label="Instagram"
+                  className="flex items-center justify-center size-8 md:size-9 rounded-full bg-gray-300 text-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ease-in-out"
+                >
+                  <FaInstagram className="text-sm" />
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  aria-label="LinkedIn"
+                  className="flex items-center justify-center size-8 md:size-9 rounded-full bg-gray-300 text-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ease-in-out"
+                >
+                  <FaLinkedinIn className="text-sm" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </header>

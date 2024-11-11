@@ -158,7 +158,7 @@ const Footer = () => {
                 {" "}
                 <p className=" text-xs md:text-sm ">
                   © 2024 , All Rights Reserved. Design By{" "}
-                  <span className="font-airstrip font-semibold  text-blue-800  hover:text-blue-700">
+                  <span className="font-airstrip font-semibold text-nowrap text-blue-800  hover:text-blue-700">
                     Express{" "}
                     <span className="relative  font-sans text-base md:text-lg text-white font-bold bg-pink-700 px-1 mr-1">
                       IT
