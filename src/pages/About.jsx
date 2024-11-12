@@ -1,5 +1,4 @@
 import "animate.css";
-import Button from "../component/Button";
 
 const About = () => {
   const sentence = "Comprehensive SEO & Digital Marketing Solutions";

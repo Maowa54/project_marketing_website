@@ -11,6 +11,7 @@ import Testimonials from "./Testimonials";
 import Works from "./Works";
 import Services from "./Services";
 import About from "./About";
+import Packages from "./Packages";
 
 const Index = () => {
   const sentence1 = "Elevate Your Brand with Expert SEO & Digital Marketing";
@@ -155,7 +156,7 @@ const Index = () => {
               <img
                 src="/assets/images/lite-icons1.svg"
                 alt="Top Right Image"
-                className="absolute md:top-44 lg:top-56  md:right-40 w-20 lg:w-20 h-auto animate-bounce-slow"
+                className="absolute md:top-44 top-6 right-0 w-20 lg:right-0 md:right-36  md:w-24 h-auto animate-bounce-slow"
               />
 
               {/* Bottom Left Arrow Overlay */}
@@ -182,7 +183,7 @@ const Index = () => {
               <img
                 src="https://wp.fleexstudio.com/seoc/wp-content/uploads/2024/08/sound-icons1.svg"
                 alt="Announcement"
-                className="absolute top-4 lg:top-6 right-[600px] lg:left-20 w-24 lg:w-24 h-auto animate-bounce-slow"
+                className="absolute top-4 lg:top-6 md:left-44 left-2 lg:left-20 w-24 lg:w-24 h-auto animate-bounce-slow"
               />
             </div>
           </div>
@@ -244,6 +245,9 @@ const Index = () => {
 
       <section id="works" className="bg-[#F1E6F7] ">
         <Works />
+      </section>
+      <section id="packages" className="bg-[#F1E6F7] ">
+        <Packages />
       </section>
 
       <section id="benefits" className="bg-[#F1E6F7] ">

@@ -3,6 +3,7 @@ import Header from './component/Header';
 import Index from './pages/Index';
 
 import Footer from './component/Footer';
+import Pricing from './pages/Pricing';
 
 
 const App = () => {
@@ -12,6 +13,8 @@ const App = () => {
       
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/pricing" element={<Pricing />} />
+
 
         
         
