@@ -1,7 +1,7 @@
 const Button = ({ text }) => {
   return (
     <div>
-      <button className="bg-[#4E2FDA] relative overflow-hidden text-xs md:text-sm mt-6 font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1 w-fit">
+      <button className="bg-[#4E2FDA] relative overflow-hidden text-xs md:text-sm  font-medium text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1 w-fit">
         <span className="relative z-20">{text}</span>
         <div className="ml-2 flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-white rounded-full relative z-10">
           <svg

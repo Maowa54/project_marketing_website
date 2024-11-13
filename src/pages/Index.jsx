@@ -85,8 +85,7 @@ const Index = () => {
 
               <p
                 data-aos="fade-left"
-                data-aos-delay= "300" 
-
+                data-aos-delay="300"
                 className=" mt-4 text-gray-500 text-xs md:text-sm"
               >
                 Welcome to SEOC where we specialize in revolutionizing your
@@ -96,13 +95,14 @@ const Index = () => {
 
               <div
                 data-aos="fade-left"
-                data-aos-delay= "300" 
-
+                data-aos-delay="300"
                 className="flex flex-col sm:flex-row justify-center lg:justify-start mt-2 sm:space-x-4 md:space-x-6"
               >
                 {/* Start Ranking Now Button */}
-                <Button text="Start Ranking Now" />
-
+                <div className="pt-[25px]">
+                  {" "}
+                  <Button text="Start Ranking Now" />
+                </div>
                 {/* Contact Now Button */}
                 <button className="bg-transparent border border-[#4E2FDA] relative overflow-hidden w-fit text-xs md:text-sm mt-4 md:mt-6 font-medium text-[#4E2FDA] hover:text-white rounded-full pl-4 pr-2 py-2 flex items-center group transition-transform duration-300 hover:-translate-y-1 ">
                   <span className="relative z-20">Contact Now</span>{" "}

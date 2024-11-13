@@ -3,14 +3,16 @@ import AOS from "aos";
 import { useEffect, useRef } from "react";
 import ScrollToTopButton from "../component/ScrollToTopButton";
 import { Link } from "react-router-dom";
-import About from "./About";
+
 import Blogs from "./Blogs";
 import SocialLinks from "../component/SocialLinks";
 import Team from "../component/Team";
-import Accordion from "../component/AccordionItem";
 import AccordionItem from "../component/AccordionItem";
+import Accordion from "../component/Accordion";
+import PackageCards from "../component/PackageCards";
+import Button from "../component/Button";
 import { FaEnvelope, FaPaperclip } from "react-icons/fa";
-const Service1 = () => {
+const Service2 = () => {
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -29,6 +31,8 @@ const Service1 = () => {
 
   const sentence = " Ready to Take Your SEO to  The Next Level";
   const words = sentence.split(" "); // Split sentence into individual words
+  const sentence2 = "SEOC Pricing Plan";
+  const words2 = sentence2.split(" "); // Split sentence into individual words
 
   useEffect(() => {
     // Initialize AOS when the component mounts
@@ -61,7 +65,7 @@ const Service1 = () => {
         </div>
         <div className="text-center py-16">
           <p className="ltext-xl md:text-2xl lg:text-4xl font-semibold mb-4">
-            Search Engine Optimization
+            Pay Per Click{" "}
           </p>
           <Link to="/" className=" hover:underline  text-xs md:text-sm">
             Home
@@ -78,15 +82,10 @@ const Service1 = () => {
             to="/service1"
             className="text-[#4E2FDA] hover:underline ml-1 text-xs md:text-sm"
           >
-            Search Engine Optimization
+            Pay Per Click{" "}
           </Link>
         </div>
       </div>
-
-      <div className="bg-white  md:py-6 px-6 md:px-16 lg:px-40">
-        <About />
-      </div>
-
       <div className="companies-logo border py-9 px-4 md:px-20 lg:px-40 bg-[#4E2FDA]">
         <div className="grid grid-cols-12 gap-4 items-center">
           {/* Text Section */}
@@ -130,202 +129,46 @@ const Service1 = () => {
         </div>
       </div>
 
-      <div className="bg-white  md:py-6 px-6 md:px-16 lg:px-56">
-        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-6 mx-auto">
-          {/* Left Image Container */}
-          <div className="left-image relative mt-4 md:mt-24 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/about-img6.png"
-                alt="Man Holding Laptop"
-                data-aos="slide-right"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements14.png"
-              alt="Star"
-              className="w-10 absolute top-9 md:top-16 lg:-top-10 right-2 animate-[spin_30s_linear_reverse_infinite]"
-            />
+      <div>
+        <div className="bg-white text-center py-8  ">
+          <div className="flex flex-col items-center">
+            <div className="w-5 h-[2px] bg-[#4E2FDA] mr-14 mb-1"></div>
+            <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">Case Study</p>
+            <p className="text-xl md:text-3xl font-semibold">
+              SEOC Case Study
+            </p>{" "}
           </div>
+        </div>
 
-          {/* Center Content */}
-          <div className="center-content relative pt-6 pb-4 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img5.png"
-                alt="Microsoft Logo"
-                data-aos="slide-right"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements15.png"
-              alt="Galaxy"
-              className="w-14 absolute bottom-2 md:bottom-8 right-0 md:right-0 lg:-left-2 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
-            />
-          </div>
-
-          {/* Right  Container */}
-          <div className="right-content text-center lg:text-left md:px-4 flex flex-col items-center pt-12 md:pt-36 ">
-            <div className="">
-              <div className="w-5 h-[2px] bg-[#4E2FDA] mb-1 "></div>
-              <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">
-                SEO Service
-              </p>
-              <p
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold "
-                style={{ lineHeight: "1.3" }}
-              >
-                Keyword Research & Strategy
-              </p>{" "}
-              <p
-                id="text"
-                data-aos="fade-left"
-                className="mt-3 text-gray-500 text-xs md:text-sm transition-all "
-              >
-                Welcome to SEOC, your trusted partner for comprehensive SEO and
-                digital marketing solutions, with proven expertise and
-                innovative strategies.
-              </p>
-            </div>
-          </div>
+        <div className="bg-white">
+          <Accordion />
         </div>
       </div>
 
-      <div className="bg-white  md:py-6 px-6 md:px-16 lg:px-56">
-        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-6 mx-auto">
-          {/* Left Image Container */}
-          <div className="left-content text-center lg:text-left md:px-4 flex flex-col items-center pt-12 md:pt-36 ">
-            <div className="">
-              <div className="w-5 h-[2px] bg-[#4E2FDA] mb-1 "></div>
-              <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">
-                SEO Service
-              </p>
-              <p
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold "
-                style={{ lineHeight: "1.3" }}
-              >
-                Technical SEO{" "}
-              </p>{" "}
-              <p
-                id="text"
-                data-aos="fade-right"
-                className="mt-3 text-gray-500 text-xs md:text-sm transition-all "
-              >
-                We optimize your website's content, ensuring it is relevant,
-                engaging, and includes targeted keywords. We craft compelling
-                meta titles and descriptions to improve click-through rates from
-                search engine. <br /> We enhance your website's internal linking
-                structure to improve navigation and distribute page authority.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Content */}
-          <div className="center-content relative pt-16 pb-4 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img6.png"
-                alt="Man Holding Laptop"
-                data-aos="slide-left"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements14.png"
-              alt="Star"
-              className="w-10 absolute   lg:bottom-96 right-2 animate-[spin_30s_linear_reverse_infinite]"
-            />
-          </div>
-
-          {/* Right  Container */}
-          <div className="right-content relative mt-4 md:mt-10 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img7.png"
-                alt="Microsoft Logo"
-                data-aos="slide-left"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements15.png"
-              alt="Galaxy"
-              className="w-14 absolute bottom-6 md:bottom-14 right-0 md:right-0 lg:-left-2 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
-            />
+      <div>
+        <div className="bg-[#EDEAFB] text-center pt-8  ">
+          <div className="flex flex-col items-center">
+            <div className="w-5 h-[2px] bg-[#4E2FDA] mr-14 mb-1"></div>
+            <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">Pricing</p>
+            <p className="text-xl md:text-3xl font-semibold">
+              {words2.map((word, index) => (
+                <span
+                  key={index}
+                  data-aos="fade-left"
+                  data-aos-delay={index * 100} // Delay each word slightly more than the previous
+                  className="inline-block mr-2" // Ensure words are inline with space between
+                >
+                  {word}
+                </span>
+              ))}{" "}
+            </p>{" "}
           </div>
         </div>
-      </div>
-
-      <div className="bg-white  md:py-6 px-6 md:px-16 lg:px-56">
-        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-6 mx-auto">
-          {/* Left Image Container */}
-          <div className="left-image relative mt-4 md:mt-24 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img8.png"
-                alt="Man Holding Laptop"
-                data-aos="slide-right"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements14.png"
-              alt="Star"
-              className="w-10 absolute top-9 md:top-16 lg:-top-10 right-2 animate-[spin_30s_linear_reverse_infinite]"
-            />
-          </div>
-
-          {/* Center Content */}
-          <div className="center-content relative pt-6 pb-4 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img9.png"
-                alt="Microsoft Logo"
-                data-aos="slide-right"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements15.png"
-              alt="Galaxy"
-              className="w-14 absolute bottom-2 md:bottom-8 right-0 md:right-0 lg:-left-2 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
-            />
-          </div>
-
-          {/* Right  Container */}
-          <div className="right-content text-center lg:text-left md:px-4 flex flex-col items-center pt-12 md:pt-32 ">
-            <div className="">
-              <div className="w-5 h-[2px] bg-[#4E2FDA] mb-1 "></div>
-              <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">
-                SEO Service
-              </p>
-              <p
-                className="text-xl sm:text-2xl lg:text-3xl font-semibold "
-                style={{ lineHeight: "1.3" }}
-              >
-                Content Creation & Optimization{" "}
-              </p>{" "}
-              <p
-                id="text"
-                data-aos="fade-left"
-                className="mt-3 text-gray-500 text-xs md:text-sm transition-all "
-              >
-                We regularly publish blog posts and articles to keep your
-                website fresh and relevant. We perform content audits to
-                identify gaps and opportunities for optimization. <br /> We
-                create engaging, informative content that resonates with your
-                audience and is optimized for search engines. .
-              </p>
-            </div>
-          </div>
+        <div>
+          <PackageCards />
+        </div>
+        <div className="bg-[#EDEAFB]  mx-auto flex justify-center pb-12">
+          <Button text="View Compare Plan" />
         </div>
       </div>
 
@@ -453,58 +296,55 @@ const Service1 = () => {
             <p className="text-xl md:text-3xl font-semibold">
               Why Choose SEOC For SEO?
             </p>{" "}
-
-
             <div className="bg-black  md:py-16 px-6 md:px-16 lg:px-40">
-        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-6 mx-auto">
-          {/* Left  Container */}
-          <AccordionItem/>
+              <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-6 mx-auto">
+                {/* Left  Container */}
+                <AccordionItem />
 
-          {/* Center Content */}
-          <div className="center-content relative pt-24 pb-4 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img6.png"
-                alt="Man Holding Laptop"
-                data-aos="slide-left"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
-            </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements14.png"
-              alt="Star"
-              className="w-10 absolute   lg:bottom-96 right-2 animate-[spin_30s_linear_reverse_infinite]"
-            />
-          </div>
+                {/* Center Content */}
+                <div className="center-content relative pt-24 pb-4 flex justify-center lg:block">
+                  <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
+                    <img
+                      src="/public/assets/images/service-img6.png"
+                      alt="Man Holding Laptop"
+                      data-aos="slide-left"
+                      className="w-full h-full object-cover relative z-10 "
+                    />
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrow z-20"></div>
+                  </div>
+                  <img
+                    src="https://seoc-html-v2.vercel.app/assets/img/elements/elements14.png"
+                    alt="Star"
+                    className="w-10 absolute   lg:bottom-96 right-2 animate-[spin_30s_linear_reverse_infinite]"
+                  />
+                </div>
 
-          {/* Right  Container */}
-          <div className="right-content relative mt-4 md:mt-16 pt-6 flex justify-center lg:block">
-            <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
-              <img
-                src="/public/assets/images/service-img7.png"
-                alt="Microsoft Logo"
-                data-aos="slide-left"
-                className="w-full h-full object-cover relative z-10 "
-              />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
+                {/* Right  Container */}
+                <div className="right-content relative mt-4 md:mt-16 pt-6 flex justify-center lg:block">
+                  <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
+                    <img
+                      src="/public/assets/images/service-img7.png"
+                      alt="Microsoft Logo"
+                      data-aos="slide-left"
+                      className="w-full h-full object-cover relative z-10 "
+                    />
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:animate-fadeAndGrowing z-20"></div>
+                  </div>
+                  <img
+                    src="https://seoc-html-v2.vercel.app/assets/img/elements/elements15.png"
+                    alt="Galaxy"
+                    className="w-14 absolute bottom-6 md:bottom-14 right-0 md:right-0 lg:-left-2 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
+                  />
+                </div>
+              </div>
             </div>
-            <img
-              src="https://seoc-html-v2.vercel.app/assets/img/elements/elements15.png"
-              alt="Galaxy"
-              className="w-14 absolute bottom-6 md:bottom-14 right-0 md:right-0 lg:-left-2 object-cover animate-[spin_30s_linear_reverse_infinite] z-0"
-            />
           </div>
         </div>
       </div>
-          </div>
-        </div>
+
+      <div className="">
+        <Team />
       </div>
-
-
-     <div className="">
-      <Team/>
-     </div>
 
       <div className="  ">
         <Blogs />
@@ -588,4 +428,4 @@ const Service1 = () => {
   );
 };
 
-export default Service1;
+export default Service2;

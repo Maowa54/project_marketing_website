@@ -34,7 +34,7 @@ const Accordion = () => {
   return (
     <div
       data-aos="zoom-out"
-      className="flex flex-col lg:flex-row lg:px-40 mt-4 py-2 mx-auto justify-center gap-3 "
+      className="flex flex-col lg:flex-row lg:px-40  py-2 mx-auto justify-center gap-3 "
     >
       {images.map((src, index) => (
         <article

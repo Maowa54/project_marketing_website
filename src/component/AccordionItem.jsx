@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Accordion = ({ title, children, index, isOpen, toggle }) => {
+const Accordion2 = ({ title, children, index, isOpen, toggle }) => {
   return (
     <div className="mt-4 border w-full rounded"> {/* Ensure full width even when collapsed */}
       <div
@@ -45,32 +45,32 @@ const AccordionItem = () => {
 
   return (
     <div className="w-full"> {/* Ensure the accordion container is w-full */}
-      <Accordion
+      <Accordion2
         title="Proven Result"
         index={0}
         isOpen={openIndex === 0}
         toggle={toggleAccordion}
       >
         We have a track record of delivering tangible results for our clients. From increasing website traffic and improving search.
-      </Accordion>
+      </Accordion2>
 
-      <Accordion
+      <Accordion2
         title="Customized Solutions"
         index={1}
         isOpen={openIndex === 1}
         toggle={toggleAccordion}
       >
         We believe that one size does not fit all when it comes to digital marketing. That's why we take the time to understand your SEO.
-      </Accordion>
+      </Accordion2>
 
-      <Accordion
+      <Accordion2
         title="Dedicated Support"
         index={2}
         isOpen={openIndex === 2}
         toggle={toggleAccordion}
       >
         Your success is our top priority. That's why we provide dedicated support and guidance every step of the way to running SEO.
-      </Accordion>
+      </Accordion2>
     </div>
   );
 };
