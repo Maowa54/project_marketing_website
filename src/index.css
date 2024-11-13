@@ -15,6 +15,10 @@ body {
     #b6acdd
   );
 }
+/* In index.css or your global stylesheet */
+.logo-white {
+  filter: invert(100%) brightness(200%) contrast(150%);
+}
 
 /* Hero Section animation */
 

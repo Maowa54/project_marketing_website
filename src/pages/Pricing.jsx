@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import ScrollToTopButton from "../component/ScrollToTopButton";
 import TickMark from "../component/TickMark";
 import Table from "../component/Table";
+import { Link } from "react-router-dom";
 const Pricing = () => {
   const sentence2 = "Compare Plan Suitable for Your Business";
   const words2 = sentence2.split(" "); // Split sentence into individual words
@@ -43,9 +44,16 @@ const Pricing = () => {
           <p className="ltext-xl md:text-2xl lg:text-4xl font-semibold mb-4">
             Pricing Plan
           </p>
-          <a href="/">
-            Home > <span className="font-medium">Pricing Plan</span>{" "}
-          </a>
+          <Link to="/" className=" hover:underline  text-xs md:text-sm">
+            Home
+          </Link>
+          {" > "}
+          <Link to="/" className=" hover:underline text-xs md:text-sm">
+            Packages
+          </Link>{" >"}
+          <Link to="/pricing" className="text-[#4E2FDA] hover:underline ml-1 text-xs md:text-sm">
+            Pricing Plan
+          </Link>
         </div>
       </div>
 
@@ -299,7 +307,7 @@ const Pricing = () => {
 
       <div className="bg-white text-center pt-6 pb-16 ">
         <div className="flex flex-col items-center">
-          <div className="w-5 h-[2px] bg-[#4E2FDA] mb-1"></div>
+          <div className="w-5 h-[2px] bg-[#4E2FDA] mr-20 mb-1"></div>
           <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">Compare Plan</p>
           <p className="text-xl md:text-3xl font-semibold">
             {words2.map((word, index) => (

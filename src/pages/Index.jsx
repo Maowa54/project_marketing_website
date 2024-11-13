@@ -12,6 +12,7 @@ import Works from "./Works";
 import Services from "./Services";
 import About from "./About";
 import Packages from "./Packages";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const sentence1 = "Elevate Your Brand with Expert SEO & Digital Marketing";
