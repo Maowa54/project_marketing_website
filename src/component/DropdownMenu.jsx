@@ -12,6 +12,14 @@ const DropdownMenu = ({ name, target, items }) => {
     setIsDropdownOpen(false);
   };
 
+  // Function to handle scrolling to a section
+  const handleScroll = (target) => {
+    const section = document.querySelector(target);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className="relative px-3 py-2 text-sm hover:bg-[#4E2FDA] hover:text-white transition-colors duration-300 rounded"
@@ -19,9 +27,9 @@ const DropdownMenu = ({ name, target, items }) => {
       onMouseLeave={handleMouseLeave}
     >
       {/* Main Link for Dropdown */}
-      <Link
-        to={target}
+      <button
         className="flex items-center whitespace-nowrap"
+        onClick={() => handleScroll(target)} // Scroll to section on click
       >
         {name}
         <svg
@@ -35,7 +43,9 @@ const DropdownMenu = ({ name, target, items }) => {
             clipRule="evenodd"
           />
         </svg>
-      </Link>
+      </button>
+      
+      {/* Dropdown Menu */}
       {isDropdownOpen && (
         <div
           className="absolute left-0 mt-2 bg-white border rounded shadow-lg w-auto min-w-[200px] z-10"
@@ -45,7 +55,7 @@ const DropdownMenu = ({ name, target, items }) => {
           {items.map((item) => (
             <Link
               key={item.name}
-              to={item.target}
+              to={item.target} // Navigate to other pages when clicking dropdown item
               className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-[#4E2FDA] transition-colors duration-300 whitespace-nowrap"
             >
               {item.name}

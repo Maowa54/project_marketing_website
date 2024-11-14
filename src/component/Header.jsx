@@ -1,17 +1,10 @@
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import DropdownMenu from "./DropdownMenu";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaTwitter } from "react-icons/fa";
 
 const Header = () => {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isPackagesOpen, setIsPackagesOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -19,17 +12,16 @@ const Header = () => {
 
   const menuItems = [
     { name: "About", target: "#about" },
-    { name: "Services", target: "#services" }, // Services with dropdown
+    { name: "Services", target: "#services" },
     { name: "Works", target: "#works" },
-    { name: "Packages", target: "#packages" }, // Packages with dropdown
+    { name: "Packages", target: "#packages" },
     { name: "Testimonials", target: "#testimonials" },
     { name: "Blogs", target: "#blogs" },
     { name: "Contact", target: "#contact" },
   ];
 
   const servicesItems = [
-    { name: "Best Services", target: "/allservices" },
-
+    { name: "Our Best Services", target: "/allservices" },
     { name: "Search Engine Optimization", target: "/service1" },
     { name: "Pay Per Click Service", target: "/service2" },
     { name: "Email Marketing", target: "/service3" },
@@ -38,7 +30,6 @@ const Header = () => {
 
   const packagesItems = [
     { name: "Pricing Plan", target: "/pricing" },
-    // Add more package items as needed
   ];
 
   useEffect(() => {
@@ -46,17 +37,6 @@ const Header = () => {
       setIsSticky(window.scrollY > 50);
       setShowHeader(window.scrollY > 0);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
-      setShowHeader(window.scrollY > 0);
-    };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -68,6 +48,7 @@ const Header = () => {
       } ${showHeader ? "top-0" : "-top-20"}`}
     >
       <div className="w-[90%] mx-auto flex items-center justify-between">
+        {/* Logo */}
         <a href="/">
           <img
             src="/assets/images/expressit-Plus.png"
@@ -76,7 +57,7 @@ const Header = () => {
           />
         </a>
 
-        {/* Hamburger Icon for Mobile */}
+        {/* Hamburger Menu for Mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-gray-700 focus:outline-none"
@@ -88,44 +69,41 @@ const Header = () => {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
-        {/* Navigation Menu */}
+        {/* Desktop Navbar */}
         <nav className="hidden lg:flex text-gray-700 text-base space-x-2 text-nowrap font-medium">
-          {menuItems.map((item) =>
-            item.name === "Services" ? (
-              <DropdownMenu
-                key={item.name}
-                name="Services"
-                target={item.target}
-                items={servicesItems}
-              />
-            ) : item.name === "Packages" ? (
-              <DropdownMenu
-                key={item.name}
-                name="Packages"
-                target={item.target}
-                items={packagesItems}
-              />
-            ) : (
-              <a
-                key={item.name}
-                href={item.target}
-                className="px-3 py-2 text-sm hover:bg-[#4E2FDA] hover:text-white transition-colors duration-300 rounded"
-              >
-                {item.name}
-              </a>
-            )
-          )}
+        {menuItems.map((item) =>
+    item.name === "Services" ? (
+      <DropdownMenu
+        key={item.name}
+        name="Services"
+        target={item.target}
+        items={servicesItems}
+        onClickScroll={true}  // This will trigger scrolling for the "Services" item
+      />
+    ) : item.name === "Packages" ? (
+      <DropdownMenu
+        key={item.name}
+        name="Packages"
+        target={item.target}
+        items={packagesItems}
+        onClickScroll={true}  // This will trigger scrolling for the "Packages" item
+      />
+    ) : (
+      <Link
+        key={item.name}
+        smooth
+        to={item.target}
+        className="px-3 py-2 text-sm hover:bg-[#4E2FDA] hover:text-white transition-colors duration-300 rounded"
+      >
+        {item.name}
+      </Link>
+    )
+  )}
         </nav>
-
         <button className="bg-[#4E2FDA] hidden relative overflow-hidden text-sm font-medium text-white rounded-full pl-4 pr-2 py-2 lg:flex items-center group transition-transform duration-300 hover:-translate-y-1">
           <span className="relative z-20">Free Consultation</span>
           <div className="ml-2 flex items-center justify-center w-8 h-8 bg-white rounded-full relative z-10">
@@ -136,110 +114,100 @@ const Header = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 12h14M12 5l7 7-7 7"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </div>
           <span className="absolute inset-0 bg-[#2F02FE] rounded-full transition-transform duration-300 scale-0 group-hover:scale-150"></span>
         </button>
-      </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col max-h-screen overflow-y-auto">
-          <div className="flex items-center justify-between px-6 py-4 border-b">
-            <a href="/">
-              <img
-                src="/assets/images/expressit-Plus.png"
-                alt="ExpressITbd Logo"
-                className="h-8 md:h-12 w-40"
-              />
-            </a>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-white p-2 bg-[#4E2FDA] rounded-full"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="fixed inset-0 bg-white z-50 flex flex-col max-h-screen overflow-y-auto">
+            <div className="flex items-center justify-between px-6 py-4 border-b">
+              <a href="/">
+                <img
+                  src="/assets/images/expressit-Plus.png"
+                  alt="ExpressITbd Logo"
+                  className="h-8 md:h-12 w-40"
                 />
-              </svg>
-            </button>
-          </div>
-
-          {/* Mobile Menu Items */}
-          {menuItems.map((item, index) =>
-            item.name === "Services" ? (
-              <div key={index}>
-                <div
-                  onClick={() => setIsPackagesOpen(!isPackagesOpen)} // You can change this to a new state for services if needed
-                  className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b cursor-pointer flex justify-between items-center"
+              </a>
+              <button onClick={() => setIsOpen(false)} className="text-white p-2 bg-[#4E2FDA] rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <span>{item.name}</span>
-                  <span>{isPackagesOpen ? "-" : "+"}</span>
-                </div>
-                {isPackagesOpen && (
-                  <div className="pl-4 mt-2">
-                    {servicesItems.map((service, serviceIndex) => (
-                      <Link
-                        key={serviceIndex}
-                        to={service.target}
-                        className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 transition-colors duration-300"
-                        onClick={() => setIsOpen(false)} // Close the menu when a service is selected
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : item.name === "Packages" ? (
-              <div key={index}>
-                <div
-                  onClick={() => setIsPackagesOpen(!isPackagesOpen)}
-                  className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b cursor-pointer flex justify-between items-center"
-                >
-                  <span>{item.name}</span>
-                  <span>{isPackagesOpen ? "-" : "+"}</span>
-                </div>
-                {isPackagesOpen && (
-                  <div className="pl-4 mt-2">
-                    <Link
-                      to="/pricing"
-                      className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 transition-colors duration-300"
-                      onClick={() => setIsOpen(false)} // Close the menu when the pricing plan is selected
-                    >
-                      Pricing Plan
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={index}
-                to={item.target}
-                className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b transition-colors duration-300"
-                onClick={() => setIsOpen(false)} // Close the menu when any other item is selected
-              >
-                {item.name}
-              </Link>
-            )
-          )}
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
 
-          <div className="mx-auto">
+            {/* Menu Items */}
+            {menuItems.map((item) =>
+              item.name === "Services" ? (
+                <div key="services">
+                  <div
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b cursor-pointer flex justify-between items-center"
+                  >
+                    <span>Services</span>
+                    <span>{isServicesOpen ? "-" : "+"}</span>
+                  </div>
+                  {isServicesOpen && (
+                    <div className="pl-6 space-y-2">
+                      {servicesItems.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.target}
+                          className="block text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-4 py-2 transition-colors duration-300"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : item.name === "Packages" ? (
+                <div key="packages">
+                  <div
+                    onClick={() => setIsPackagesOpen(!isPackagesOpen)}
+                    className="w-full text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b cursor-pointer flex justify-between items-center"
+                  >
+                    <span>Packages</span>
+                    <span>{isPackagesOpen ? "-" : "+"}</span>
+                  </div>
+                  {isPackagesOpen && (
+                    <div className="pl-6 space-y-2">
+                      {packagesItems.map((packageItem) => (
+                        <Link
+                          key={packageItem.name}
+                          to={packageItem.target}
+                          className="block text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-4 py-2 transition-colors duration-300"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {packageItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  smooth
+                  to={item.target}
+                  className="block text-gray-700 text-sm hover:bg-[#4E2FDA] hover:text-white px-6 py-3 border-b transition-colors duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+
+<div className="mx-auto">
             <button
               id="button"
               className="bg-[#4E2FDA] relative overflow-hidden text-sm font-medium text-white rounded-full mt-4 px-6 py-2 flex items-center group transition-transform duration-200 hover:-translate-y-1"
@@ -268,8 +236,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Contact Info and Social Links */}
-          <div className="my-4 px-6 py-3 space-y-4">
+             {/* Contact Info and Social Links */}
+         <div className="my-4 px-6 py-3 space-y-4">
             <div>
               <p className="text-lg font-semibold">Contact Info</p>
               <div className="flex mt-2">
@@ -320,13 +288,17 @@ const Header = () => {
                   aria-label="LinkedIn"
                   className="flex items-center justify-center size-8 md:size-9 rounded-full bg-gray-300 text-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ease-in-out"
                 >
-                  <FaLinkedinIn className="text-sm" />
+                  <FaLinkedin className="text-sm" />
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>
+
+
+        )}
+        
+      </div>
     </header>
   );
 };

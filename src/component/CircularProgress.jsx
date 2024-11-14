@@ -62,7 +62,7 @@ const CircularProgressGroup = () => {
   const labels = ["SMM", "PPC", "SEO", "Digital Marketing"]; // Labels for each circle
 
   return (
-    <div className="flex justify-around items-center gap-6">
+    <div className="grid justify-around grid-cols-1 md:grid-cols-4 items-center gap-6">
       {percentages.map((percentage, index) => (
         <div key={index} className="flex flex-col items-center">
           <CircularProgress percentage={percentage} size={140} />

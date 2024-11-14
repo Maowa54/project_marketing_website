@@ -8,8 +8,8 @@ const Team = () => {
     <div className="">
        <div className="bg-white text-center  py-12 ">
         <div className="flex flex-col items-center">
-          <div className="w-5 h-[2px] bg-[#4E2FDA] mr-20 mb-1"></div>
-          <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">Compare Plan</p>
+          <div className="w-5 h-[2px] bg-[#4E2FDA] mr-12 mb-1"></div>
+          <p className="text-[#4E2FDA] mb-2 text-xs md:text-sm">Our Team</p>
           <p className="text-xl md:text-3xl font-semibold">
             {words2.map((word, index) => (
               <span

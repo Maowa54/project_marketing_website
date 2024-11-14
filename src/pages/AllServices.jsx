@@ -250,7 +250,7 @@ const AllServices = () => {
             </div>
             <div
               data-aos="fade-right"
-              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded"
+              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded hover:bg-[#4E2FDA]  hover:text-white"
             >
               <div className=" flex  ">
                 <div className="bg-[#DDD2F3]  rounded-full size-14 flex justify-center items-center">
@@ -262,7 +262,7 @@ const AllServices = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="">
                 <p className="font-semibold ">Proven Result</p>
                 <p className="text-xs">
                   {" "}
@@ -273,7 +273,7 @@ const AllServices = () => {
             </div>
             <div
               data-aos="fade-right"
-              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded"
+              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded hover:bg-[#4E2FDA]  hover:text-white "
             >
               <div className=" flex  ">
                 <div className="bg-[#DDD2F3]  rounded-full size-14 flex justify-center items-center">
@@ -297,7 +297,7 @@ const AllServices = () => {
             </div>
             <div
               data-aos="fade-right"
-              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded"
+              className="mt-4 border w-full flex text-sm md:text-base p-4 space-x-4 rounded hover:bg-[#4E2FDA]  hover:text-white"
             >
               <div className=" flex  ">
                 <div className="bg-[#DDD2F3]  rounded-full size-14 flex justify-center items-center">
@@ -324,7 +324,7 @@ const AllServices = () => {
           <div className="center-content relative pt-24 pb-4 flex justify-center lg:block">
             <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
               <img
-                src="/public/assets/images/service-img6.png"
+                src="/assets/images/about-img6.png"
                 alt="Man Holding Laptop"
                 data-aos="slide-left"
                 className="w-full h-full object-cover relative z-10 "
@@ -342,7 +342,7 @@ const AllServices = () => {
           <div className="right-content relative mt-4 md:mt-16 pt-6 flex justify-center lg:block">
             <div className="relative  w-[230px] h-[320px]  md:w-[230px] md:h-[380px] overflow-hidden rounded-full group">
               <img
-                src="/public/assets/images/service-img7.png"
+                src="/assets/images/about-img5.png"
                 alt="Microsoft Logo"
                 data-aos="slide-left"
                 className="w-full h-full object-cover relative z-10 "
